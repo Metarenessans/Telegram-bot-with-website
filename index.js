@@ -9,8 +9,8 @@ const bot = new TelegramApi(token, { polling: true });
 
 bot.setMyCommands([
   { command: '/start', description: 'Начальное приветствие' },
-  { command: '/info', description: 'Получить информацию о боте' },
-  { command: '/name', description: 'Узнать своё имя' },
+  { command: '/info',  description: 'Получить информацию о боте' },
+  { command: '/name',  description: 'Узнать своё имя' },
 ]);
 
 const start = () => {
