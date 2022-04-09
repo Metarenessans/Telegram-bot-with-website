@@ -55,13 +55,12 @@ const applicationGet = async () => {
     console.log(applications);
 
     for (let application of applications) {
-      const [name, tel, description] = application;
+      const [name, tel] = application;
 
       bot.sendMessage(chatId, `
         Заявка:
         Имя: ${name}
         Телефон: ${tel}
-        Проблема: ${description}
       `)
       bot.sendMessage(chatId, tel)
     }
