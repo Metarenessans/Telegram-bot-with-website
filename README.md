@@ -1,2 +1,2 @@
 # telegram-bot
-Стягивание данных из google таблиц и отправка изменений сообщением в telegtam чате.
+Takes data drom google tabs and sends them like a message to chat.
