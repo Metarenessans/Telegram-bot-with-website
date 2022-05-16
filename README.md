@@ -1,2 +1,2 @@
 # telegram-bot
-Takes data drom google tabs and sends them like a message to chat.
+Takes data from google tabs and sends them like a message to chat.
