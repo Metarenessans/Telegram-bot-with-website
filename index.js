@@ -7,6 +7,8 @@ const TelegramApi = require('node-telegram-bot-api');
 
 const bot = new TelegramApi(token, { polling: true });
 
+let chatsArr = [790578718, 1678930701];
+
 bot.setMyCommands([
   { command: '/start', description: 'Начальное приветствие' },
   { command: '/info',  description: 'Получить информацию о боте' },
@@ -16,10 +18,11 @@ bot.setMyCommands([
 const start = () => {
   bot.on('message', async msg => {
     const text = String(msg.text).toLowerCase();
-    const chatId = msg.chat.id;
+    chatId = msg.chat.id;
     const userName = msg.from.username;
 
     if (text == '/start') {
+      console.log(chatId);
       return bot.sendMessage(chatId, `Приветствую`);
     }
     if (text == '/info') {
@@ -56,17 +59,19 @@ const applicationGet = async () => {
 
     for (let application of applications) {
       const [name, tel] = application;
-
-      bot.sendMessage(chatId, `
-        Заявка:
-        Имя: ${name}
-        Телефон: ${tel}
-      `)
-      bot.sendMessage(chatId, tel)
+      
+      chatsArr.forEach(async chatId => {
+        await bot.sendMessage(chatId, `
+          Заявка:
+          Имя: ${name}
+          Телефон: ${tel}
+        `)
+        await bot.sendMessage(chatId, tel)
+      })
     }
   }
   prevCount = count;
 };
 
 start();
-setInterval(applicationGet, 3_000);
+setInterval(applicationGet, 3000);
