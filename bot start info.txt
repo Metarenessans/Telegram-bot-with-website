@@ -1,0 +1,36 @@
+Take login and password from service data
+To log in use "PuTTY"
+
+updating all packages - sudo apt update
+
+install important dependences
+sudo apt install git
+sudo apt install nodejs
+sudo apt install npm
+
+use command
+git clone "url from repositiry type: 'https' "
+
+private repository:
+1: enter login
+2: paste generated public key
+
+getting public key:
+github > 
+settings > 
+lower left corner (developer settings) > 
+Personal access tokens > 
+Generate new token
+
+enter inportant folder -  cd 'folder name'/
+install npm
+npm install
+
+pacja
+install a package for background work of the bot without a console
+npm i pm2 -g
+
+Launching bot in background
+ENter bor folder
+enter this command: pm2 start 'executable file'
+
