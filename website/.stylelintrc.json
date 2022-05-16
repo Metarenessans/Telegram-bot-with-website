@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "custom-property-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": "Expected custom property name to be kebab-case"
+      }
+    ],
+    "comment-whitespace-inside": "always",
+    "string-quotes": "double",
+    "function-comma-space-after": "always",
+    "function-parentheses-space-inside": "never",
+    "no-descending-specificity": null
+  }
+}

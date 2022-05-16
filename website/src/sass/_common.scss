@@ -1,0 +1,54 @@
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+
+  &.scroll-disabled {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+  }
+}
+
+main {
+  overflow: hidden;
+
+  &[inert] {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.section {
+  padding: 5em 0;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5rem;
+  
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+
+    @include sm {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+.sm-only {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.hide-sm {
+  @include sm {
+    display: none;
+  }
+}
+  

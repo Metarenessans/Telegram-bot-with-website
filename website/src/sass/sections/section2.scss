@@ -1,0 +1,22 @@
+@import "../components/table";
+
+.section2 {
+  background-color: var(--secondary-color);
+  padding: 10rem 5rem 15rem;
+
+  @include sm {
+    padding: 10rem 2.25rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items:     center;
+
+    margin-top: 10rem;
+
+    @include sm {
+      margin-top: 6rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+$fonts: "../fonts/";
+
+@font-face {
+  font-family: "LogoPixies";
+  src: 
+    local("LogoPixies"),
+    url($fonts + "LogoPixies.woff2") format("woff2"),
+    url($fonts + "LogoPixies.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: 
+    local("Montserrat ExtraBold"),
+    local("Montserrat-ExtraBold"),
+    url($fonts + "Montserrat-ExtraBold.woff2") format("woff2"),
+    url($fonts + "Montserrat-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

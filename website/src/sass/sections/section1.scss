@@ -1,0 +1,57 @@
+.section1 {
+  position: relative;
+  z-index: 0;
+  
+  padding: 30.3rem 0 8.5rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: url(../img/hero.jpg) no-repeat center -3.85rem / cover;
+  background-image: -webkit-image-set(url(../img/hero.webp) 1x);
+  background-color: #978875;
+  
+  font-family: "LogoPixies", "Arial", sans-serif;
+
+  @include sm {
+    background-position: center top;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top:  0;
+    width:  100%;
+    height: 100%;
+    background: linear-gradient(67.84deg, rgba(0, 10, 30, 0.5) 0%, rgba(30, 10, 0, 0) 100%),
+  }
+
+  &__inner {
+    padding: 0 3.5rem;
+  }
+
+  &__title {
+    margin:  0;
+
+    font-size: 8rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+
+    @include sm {
+      font-size: 6.2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 3rem;
+
+    > * + * {
+      margin-left: 2.5rem;
+    }
+  }
+}
