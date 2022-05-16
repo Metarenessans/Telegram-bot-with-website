@@ -1,5 +1,0 @@
-node_modules/
-.vscode/
-google-api-php-client/
-public/credentials.json
-package-lock.json
